@@ -1,0 +1,194 @@
+:root {
+    --holiday_color: #2fbaff;
+    --info1: #2aaff8;
+    --info2: #25a5f1;
+    --info3: #1f9aeb;
+    --full-op: 1;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: var(--full-op);
+    }
+}
+
+@keyframes background-color-fade-in {
+    from {
+        background-color: #000000;
+    }
+    to {
+        background-color: #66ccff;
+    }
+}
+
+html {
+    background-color: #6cf;
+    -webkit-user-select: none;
+    user-select: none;
+    animation: background-color-fade-in 0.5s ease-in;
+    -webkit-animation: background-color-fade-in 0.5s ease-in;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+.title {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    width: 100%;
+    top: 90px;
+    animation: fade-in 1s ease-in;
+    -webkit-animation: fade-in 1s ease-in;
+}
+
+.title img {
+    display: inline-block;
+    position: fixed;
+    right: 5px;
+    bottom: 15px;
+    width: 150px;
+    opacity: .2;
+    transform: rotate(-0.05turn);
+    -webkit-transform: rotate(-0.05turn);
+    --full-op: .2;
+    animation: fade-in 1s ease-in;
+    -webkit-animation: fade-in 1s ease-in;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.title img:hover {
+    width: 170px;
+    opacity: .6;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.holiday {
+    position: absolute;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+    top: 165px;
+    left: 0;
+    margin-top: 50px;
+    font-weight: 600;
+    animation: fade-in 1.5s ease-in;
+}
+
+.holiday .CountDown_Number {
+    display: inline-block;
+    width: 90px;
+    background-color: var(--holiday_color);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.holiday #day {
+    width: 120px !important;
+}
+
+.holiday .split {
+    margin: -15px;
+}
+
+.holiday .Tian_char {
+    font-weight: 500 !important;
+    font-size: 30px;
+}
+
+.holiday .split {
+    animation: fade-in 1.5s ease-in;
+    -webkit-animation: fade-in 1.5s ease-in;
+}
+
+.info {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 380px;
+    color: white;
+    font-weight: 600;
+}
+
+.info a {
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+}
+
+.info img {
+    margin-bottom: -5px;
+}
+
+.info .info1 .B {
+    display: inline-block;
+    font-weight: 700;
+    white-space: none;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.info1,.info2,.info3 {
+    display: inline-block;
+    padding: 7px 7px 7px 20px;
+    margin: 15px;
+    width: 550px;
+    height: 25px;
+    border-radius: 10px;
+    text-align: left;
+    white-space: none;
+}
+
+.info .info1 {
+    background-color: var(--info1);
+    animation: fade-in 1s ease-in;
+    -webkit-animation: fade-in 1s ease-in;
+}
+
+.info .info2 {
+    background-color: var(--info2);
+    animation: fade-in 1.5s ease-in;
+    -webkit-animation: fade-in 1.5s ease-in;
+}
+
+.info .info3 {
+    background-color: var(--info3);
+    animation: fade-in 2s ease-in;
+    -webkit-animation: fade-in 2s ease-in;
+}
+
+.warning {
+    position: fixed;
+    display: none;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    background-color: whitesmoke;
+    opacity: .8;
+    --full-op: .8;
+    color: red;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: large;
+    animation: fade-in 1s;
+    -webkit-animation: fade-in 1s;
+}
+
+@media screen and (max-width: 800px) {
+    .warning {
+        display: block;
+    }
+}

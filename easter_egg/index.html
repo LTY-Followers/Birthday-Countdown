@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter Egg</title>
+    <style>
+        html {
+            background-color: #66ccff;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            color: white;
+        }
+        img {
+            border-radius: 15px;
+            padding: 5px;
+            background-color: rgb(237, 237, 237);
+            margin: 5px;
+            width: 300px;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+        }
+        img:hover {
+            width: 500px;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            cursor: zoom-in;
+        }
+        h1 {
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        h1 a {
+            color: white;
+        }
+        p {
+            color: white;
+            font-weight: bold;
+            font-size: large;
+        }
+        a {
+            color: white;
+            font-weight: bold;
+            font-size: large;
+        }
+    </style>
+</head>
+<body onload="console.log('这里是彩蛋页面！！');times=0;">
+    <h1 onclick="document.write('');location.reload(true)">华生，你发现了彩蛋！</h1>
+    <p>提示:刷新即可回到倒计时界面</p>
+    <img src="./img/1.png" />
+    <br>
+    <img src="./img/2.png" />
+    <br>
+    <img src="./img/3.png" />
+    <br>
+    <img src="./img/4.webp" />
+    <br>
+    <a href="../legacy/index.html">回到旧版看看作者曾经写的答辩</a>
+</body>
+</html>
