@@ -96,7 +96,7 @@ body {
 }
 
 .holiday #day {
-    width: 120px !important;
+    width: fit-content !important;
 }
 
 .holiday .split {
